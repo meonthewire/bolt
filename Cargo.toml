@@ -1,0 +1,11 @@
+[workspace]
+members = ["src/bolt", "src/ctl"]
+default-members = ["src/bolt", "src/ctl"]
+resolver = "2"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true

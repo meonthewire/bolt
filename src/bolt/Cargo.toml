@@ -1,0 +1,21 @@
+[package]
+name = "bolt-server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "bolt-server"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+byteordered = "0.6.0"
+log = "0.4"
+env_logger = "0.10"
+async-std = "1.9"
+logger = { path = "../logger" }
+server = { path = "../server" }
+
+[profile.release]
+lto = true
+panic = "abort"

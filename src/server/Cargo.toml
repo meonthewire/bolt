@@ -1,0 +1,15 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[lib]
+bench = false
+
+[dependencies]
+byteordered = "0.6.0"
+log = "0.4"
+env_logger = "0.10"
+async-std = "1.9"
+storage = { path = "../storage" }
